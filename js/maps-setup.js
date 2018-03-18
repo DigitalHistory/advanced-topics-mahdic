@@ -62,18 +62,17 @@ function initializeMap() {
               title: "first Marker",
               window_content: "<h1>North Point</h1><p>A common reference point for descriptions of Kamaran Island due to its harbour and proximity to "the Lazarette" (or Quarantine Station). In a 1941 'Arabia Intelligence Report', published by the British India Office, the North Point is a commonly used spatial marker to estimate relative distances between other sites (e.g. "Quarantine Piers (1/2 mile north of North Point)", p. 35)</p>"
              },
-             {position: new google.maps.LatLng(41.8902,12.4923),
+             {position: new google.maps.LatLng(15.352841,42.616829),
               map: my_map,
               icon: blueURL, // this sets the image that represents the marker in the map
               title: "second Marker",
-              window_content: "<h1>Marker2</h1><p> and <a href='http://something'>this would</a> be the extended description</p>"
+              window_content: "<h1>Camp 4</h1><p>There are five general camps, and one smaller one. This is the only camp identified in the 1957 camp, indicating that it was one of few that were either not demolished or still contains some kind of relative-spatial/cartographic or strategic importance.</p>" <img title "Quarantine Camp" src="https://i.imgur.com/V5frA2V.jpg"/>
             },
-            {position: new google.maps.LatLng(41.8986,12.4768),
+            {position: new google.maps.LatLng(15.338876,42.615177),
              map: my_map,
              icon: redURL, // this sets the image that represents the marker in the map
              title: "third Marker",
-             window_content: '<h1>Marker3</h1><img title="Picture of Quote. Src: someone, some year"  src="https://i.imgur.com/V5frA2V.jpg"/>' +
-             '<blockquote>quote quote quote quote</blockquote>'
+             window_content: <h1>Marker3</h1><p>Qurantine piers – in addition to serving as a quarantine space, these 5, 10, or 15 days also include ship repair and disinfection.</p>
            }
             ];
 
