@@ -1,3 +1,4 @@
+
 # Preamble: Death in Mecca
 
 At the outset of the twentieth-century, empires and local polities were scrambling to control Hajj, the annual Islamic pilgrimage. In 1893, more than 30,000 people died from cholera in the Hijaz region alone (Goodman 1971). From 1899 to 1923, the “sixth pandemic” of cholera – contemporaneously referred to as “Asiatic cholera,” stretching from South Asia to North Africa – killed more than 34,000. In this state of emergency, Western (namely, British and French) medical scholarship conceptualized Mecca as a “relay station” for disease between East and West (Peters 1994).
@@ -34,8 +35,8 @@ Instituted in 1882 by the Ottoman Health Board, partly in reaction/in anxiety to
 # Spatializing Kamaran
 
 Even though it ran continuously for 70 years, there are few maps or conclusive spatial accounts as to where these camps are (now, likely dissembled) on the island; indeed, there is no GIS information/markers available for this island viz. Google Maps. For this spatial history of Kamaran (and other relevant spaces in the history of Hajj medicalization), I rely on the following sources:
--	A 1896 map (“Plan de l’ile de Camaran”) from “Rapport de la Commission des Lazarets Présenté Au Conseil Supérieur de Santé le 23/24 Août 1896” (in Tagliacozzo, _The Longest Journey_, p. 136)
--	A 1957 survey map (“Kamaran Island”) from the British “War Office and Air Ministry”
+-	A 1896 map (“Plan de l’ile de Camaran”) from “Rapport de la Commission des Lazarets Présenté Au Conseil Supérieur de Santé le 23/24 Août 1896” (in Tagliacozzo, _The Longest Journey_, p. 136) – [view here.](blob:https://imgur.com/b1c80e5c-c4a0-4564-a8da-8de40b7dff1c)
+-	[A 1957 survey map (“Kamaran Island”) from the British “War Office and Air Ministry”](http://nla.gov.au/nla.obj-233246749/view)
 
 
 ## in sections like this

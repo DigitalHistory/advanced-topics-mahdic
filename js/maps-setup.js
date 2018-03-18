@@ -21,16 +21,16 @@ var blue_markers = [];
 // this is for fun, if you want it.  With this powerful feature you can add arbitrary
 // data layers to your map.  It's cool. Learn more at:
 // https://developers.google.com/maps/documentation/javascript/datalayer#load_geojson
-var myGeoJSON= {
-  "type":"FeatureCollection",
+var myGeoJSON=
+  {"type":"FeatureCollection",
   "features":
   [{"type":"Feature",
     "properties":{myColor: 'red'},
     "myColor" : "red",
     "geometry":{"type":"Polygon",
-                "coordinates":[[[-85.60546875,49.03786794532644],[-96.6796875,40.713955826286046],
-                                [-79.62890625,37.71859032558816],[-81.2109375,49.26780455063753],
-                                [-85.60546875,49.03786794532644]]]}},
+                "coordinates":[[[15.339274,42.607477],[15.392329,42.574402],
+                                [15.402961,42.630748],[15.399057,42.637443],
+                                [15.339274,42.607477]]]}},
    {"type":"Feature",
     "properties":{myColor: 'green'},
     "myColor" : "green",
@@ -55,12 +55,12 @@ function initializeMap() {
                                  my_map_options);
     // this is an *array* that holds all the marker info
     var all_my_markers =
-            [{position: new google.maps.LatLng(41.9000,12.5000),
+            [{position: new google.maps.LatLng(15.339974,42.615808),
               map: my_map,
               icon: blueURL, // this sets the image that represents the marker in the map to the one
                              // located at the URL which is given by the variable blueURL, see above
               title: "first Marker",
-              window_content: "<h1>Marker1</h1><p> and this would be the extended description</p>"
+              window_content: "<h1>North Point</h1><p>A common reference point for descriptions of Kamaran Island due to its harbour and proximity to "the Lazarette" (or Quarantine Station). In a 1941 'Arabia Intelligence Report', published by the British India Office, the North Point is a commonly used spatial marker to estimate relative distances between other sites (e.g. "Quarantine Piers (1/2 mile north of North Point)", p. 35)</p>"
              },
              {position: new google.maps.LatLng(41.8902,12.4923),
               map: my_map,
