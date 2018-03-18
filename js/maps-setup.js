@@ -109,7 +109,7 @@ function initializeMap() {
     document.getElementById("map_legend").innerHTML = legendHTML;
   my_map.data.addGeoJson(myGeoJSON);
 
-  var romeCircle = new google.maps.Rectangle({
+  var FrenchQuarantine = new google.maps.Rectangle({
     strokeColor: '#FF0000',
     strokeOpacity: 0.8,
     strokeWeight: 2,
@@ -119,10 +119,10 @@ function initializeMap() {
     // add features.
     map: my_map,
     bounds: {
-      north: 42.685,
-      south: 40.671,
-      east: 12.501,
-      west: 12.485
+      north: 42.607477,
+      south: 42.637443,
+      east: 15.402961,
+      west: 15.392329
     },
 
     center: {"lat": 41.9000, "lng":12.5000},
