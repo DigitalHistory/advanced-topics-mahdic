@@ -42,9 +42,7 @@ Gandhi, in his reformist newspaper *Harijan*, claimed that caste has nothing to 
 [^seventh]: Ibid.
 
 
-# Cited in Popcorn-Containers #
-
-Hay, Stephen (editor), *Sources of Indian Tradition* (Volume Two: Modern India and Pakistan). Columbia University Press, 1988.
+### Additional: Cited in Popcorn-Containers ###
 
 Metcalf, Barbara; Metcalf, Thomas R., *A Concise History of Modern India* (2nd Ed). Cambridge University Press, 2006.
 
