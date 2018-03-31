@@ -5,7 +5,9 @@
             </div>
 
 
-# Note: Audio begins @ 0.25 #
+**Note: Audio begins @ 0.25**
+
+<img src="http://www.deccanherald.com/images/editor_images1/2012/04/10/ambedkar-or-gandhi.jpg">
 
 # Ambedkar, Gandhi, and the Making of Postcolonial India #
 

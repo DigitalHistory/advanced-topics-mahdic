@@ -7,7 +7,7 @@ var loadPopcorn = function(){
     // You'll need to change the key to match your spreadsheet.  Remember, this is the
     // part in the spreadsheet URL that comes between "key=" and "&"
     // It's very important, though, to keep the same column headers as in our example spreadsheet!
-    var public_spreadsheet_key = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSn0wC7Wrhse-I5Rv1kfrHSv_A2ttuPY1s1gTY1Ljsi8eA-TQJ00fnVFYF0iZ2ghUf4YRK3by7-eXT8/pubhtml?gid=0&single=true';
+    var public_spreadsheet_key = 'https://docs.google.com/spreadsheets/d/1rZmyEbgQi0ED4NgmeDzKuXHAr6BZRyzmh9X-6mMYEac/pubhtml?gid=0&single=true';
 
     // now we are going to use the tabletop.js library, which was called in our
     // HTML file, to grab the date from the spreadsheet and process it so that
