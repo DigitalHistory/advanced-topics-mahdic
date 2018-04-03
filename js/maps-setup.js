@@ -3,11 +3,11 @@
 // whenever we need to -- they have 'global scope'
 var my_map; // this will hold the map
 var my_map_options; // this will hold the options we'll use to create the map
-var my_center = new google.maps.LatLng(41.8986,12.4768); // center of map
+var my_center = new google.maps.LatLng(15.343464,42.589702); // center of map
 var my_markers = []; // we use this in the main loop below to hold the markers
 // this one is strange.  In google maps, there is usually only one
 // infowindow object -- its content and position change when you click on a
-// marker.  This is counterintuitive, but we need to live with it.  
+// marker.  This is counterintuitive, but we need to live with it.
 var infowindow = new google.maps.InfoWindow({content: ""});
 var legendHTML = "<h1>Legend</h1>";
 
@@ -21,16 +21,16 @@ var blue_markers = [];
 // this is for fun, if you want it.  With this powerful feature you can add arbitrary
 // data layers to your map.  It's cool. Learn more at:
 // https://developers.google.com/maps/documentation/javascript/datalayer#load_geojson
-var myGeoJSON= {
-  "type":"FeatureCollection",
+var myGeoJSON=
+  {"type":"FeatureCollection",
   "features":
   [{"type":"Feature",
     "properties":{myColor: 'red'},
     "myColor" : "red",
     "geometry":{"type":"Polygon",
-                "coordinates":[[[-85.60546875,49.03786794532644],[-96.6796875,40.713955826286046],
-                                [-79.62890625,37.71859032558816],[-81.2109375,49.26780455063753],
-                                [-85.60546875,49.03786794532644]]]}},
+                "coordinates":[[[15.339274,42.607477],[15.392329,42.574402],
+                                [15.402961,42.630748],[15.399057,42.637443],
+                                [15.339274,42.607477]]]}},
    {"type":"Feature",
     "properties":{myColor: 'green'},
     "myColor" : "green",
@@ -46,7 +46,7 @@ var myGeoJSON= {
 function initializeMap() {
     my_map_options = {
         center:  my_center, // to change this value, change my_center above
-        zoom: 13,  // higher is closer-up
+        zoom: 12.5,  // higher is closer-up
         mapTypeId: google.maps.MapTypeId.HYBRID // you can also use TERRAIN, STREETMAP, SATELLITE
     };
 
@@ -55,25 +55,24 @@ function initializeMap() {
                                  my_map_options);
     // this is an *array* that holds all the marker info
     var all_my_markers =
-            [{position: new google.maps.LatLng(41.9000,12.5000),
+            [{position: new google.maps.LatLng(15.339974,42.615808),
               map: my_map,
               icon: blueURL, // this sets the image that represents the marker in the map to the one
                              // located at the URL which is given by the variable blueURL, see above
               title: "first Marker",
-              window_content: "<h1>Marker1</h1><p> and this would be the extended description</p>"
+              window_content: "<h1>North Point</h1><p>A common reference point for descriptions of Kamaran Island due to its harbour and proximity to "the Lazarette" (or Quarantine Station). In a 1941 'Arabia Intelligence Report', published by the British India Office, the North Point is a commonly used spatial marker to estimate relative distances between other sites (e.g. "Quarantine Piers (1/2 mile north of North Point)", p. 35)</p>"
              },
-             {position: new google.maps.LatLng(41.8902,12.4923),
+             {position: new google.maps.LatLng(15.352841,42.616829),
               map: my_map,
               icon: blueURL, // this sets the image that represents the marker in the map
               title: "second Marker",
-              window_content: "<h1>Marker2</h1><p> and <a href='http://something'>this would</a> be the extended description</p>"
+              window_content: "<h1>Camp 4</h1><p>There are five general camps, and one smaller one. This is the only camp identified in the 1957 camp, indicating that it was one of few that were either not demolished or still contains some kind of relative-spatial/cartographic or strategic importance.</p>" <img title "Quarantine Camp" src="https://i.imgur.com/V5frA2V.jpg"/>
             },
-            {position: new google.maps.LatLng(41.8986,12.4768),
+            {position: new google.maps.LatLng(15.338876,42.615177),
              map: my_map,
              icon: redURL, // this sets the image that represents the marker in the map
              title: "third Marker",
-             window_content: '<h1>Marker3</h1><img title="Picture of Quote. Src: someone, some year"  src="https://s-media-cache-ak0.pinimg.com/736x/6d/e2/25/6de2251b8b4be709dcc936ae4f0caaaf.jpg"/>' +
-             '<blockquote>quote quote quote quote</blockquote>'
+             window_content: <h1>Marker3</h1><p>Qurantine piers – in addition to serving as a quarantine space, these 5, 10, or 15 days also include ship repair and disinfection.</p>
            }
             ];
 
@@ -86,7 +85,7 @@ function initializeMap() {
             window_content: all_my_markers[j].window_content});
 
         // this next line is ugly, and you should change it to be prettier.
-        // be careful not to introduce syntax errors though.  
+        // be careful not to introduce syntax errors though.
       legendHTML +=
         "<div class=\"pointer\" onclick=\"locateMarker(my_markers[" + j + "])\"> " +
           marker.window_content + "</div>";
@@ -104,30 +103,30 @@ function initializeMap() {
         } else if (all_my_markers[j].icon == redURL ) {
             red_markers.push({marker:marker, listener:listener});
         }
-        
+
     }
     document.getElementById("map_legend").innerHTML = legendHTML;
   my_map.data.addGeoJson(myGeoJSON);
 
-  var romeCircle = new google.maps.Rectangle({
+  var FrenchQuarantine = new google.maps.Rectangle({
     strokeColor: '#FF0000',
     strokeOpacity: 0.8,
     strokeWeight: 2,
     fillColor: '#FF0000',
     fillOpacity: 0.35,
     // in general, we always have to *set the map* when we
-    // add features. 
+    // add features.
     map: my_map,
     bounds: {
-      north: 42.685,
-      south: 40.671,
-      east: 12.501,
-      west: 12.485
+      north: 42.607477,
+      south: 42.637443,
+      east: 15.402961,
+      west: 15.392329
     },
 
     center: {"lat": 41.9000, "lng":12.5000},
     radius: 1000
-  });  
+  });
   my_map.data.setStyle(function (feature) {
     var thisColor = feature.getProperty("myColor");
     return {
@@ -172,7 +171,7 @@ function toggleMarkers (marker_array, map) {
 
 
 // I added this for fun.  It allows you to trigger the infowindow
-// from outside the map.  
+// from outside the map.
 function locateMarker (marker) {
     console.log(marker);
     my_map.panTo(marker.marker.position);
